@@ -1,16 +1,16 @@
-<app-button (click)="addChar(7)">7</app-button>
-<app-button (click)="addChar(8)">8</app-button>
-<app-button (click)="addChar(8)">9</app-button>
-<app-button (click)="addChar(8)">/</app-button>
-<app-button (click)="addChar(7)">4</app-button>
-<app-button (click)="addChar(8)">5</app-button>
-<app-button (click)="addChar(8)">6</app-button>
-<app-button (click)="addChar(8)">X</app-button>
-<app-button (click)="addChar(7)">1</app-button>
-<app-button (click)="addChar(8)">2</app-button>
-<app-button (click)="addChar(8)">3</app-button>
-<app-button (click)="addChar(8)">-</app-button>
-<app-button (click)="addChar(7)">0</app-button>
-<app-button (click)="addChar(8)">.</app-button>
-<app-button (click)="addChar(8)">+</app-button>
-<app-button (click)="addChar(8)">=</app-button>
+<button (click)="buttonClick(7, buttonTypes.digit)">7</button>
+<button (click)="buttonClick(8, buttonTypes.digit)">8</button>
+<button (click)="buttonClick(8, buttonTypes.digit)">9</button>
+<button (click)="buttonClick(operatorsEnum.divide, buttonTypes.operator)">/</button>
+<button (click)="buttonClick(4, buttonTypes.digit)">4</button>
+<button (click)="buttonClick(5, buttonTypes.digit)">5</button>
+<button (click)="buttonClick(6, buttonTypes.digit)">6</button>
+<button (click)="buttonClick(operatorsEnum.multi, buttonTypes.operator)">X</button>
+<button (click)="buttonClick(1, buttonTypes.digit)">1</button>
+<button (click)="buttonClick(2, buttonTypes.digit)">2</button>
+<button (click)="buttonClick(3, buttonTypes.digit)">3</button>
+<button (click)="buttonClick(operatorsEnum.subtract, buttonTypes.operator)">-</button>
+<button (click)="buttonClick(0, buttonTypes.digit)">0</button>
+<button (click)="buttonClick('.', buttonTypes.digit)">.</button>
+<button (click)="buttonClick(operatorsEnum.add, buttonTypes.operator)">+</button>
+<button (click)="buttonClick(actionsEnum.equals, buttonTypes.action)">=</button>

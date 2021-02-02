@@ -5,7 +5,13 @@ export enum OperatorsEnum {
   multi = '*'
 }
 
-export enum actionsEnum {
+export enum ActionEnum {
   equals = '=',
   clear = 'AC'
+}
+
+export enum CalcButtonEnum {
+  digit = 'digit',
+  operator = 'operator',
+  action = 'action'
 }

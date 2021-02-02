@@ -1,1 +1,7 @@
 $calc-bg-color: #333;
+
+:host {
+  display: block;
+  margin: 0 auto;
+  max-width: 350px;
+}
