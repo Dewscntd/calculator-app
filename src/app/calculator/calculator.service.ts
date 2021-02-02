@@ -15,7 +15,7 @@ export class CalculatorService {
       [OperatorsEnum.multi]: operand * value,
       [OperatorsEnum.divide]: operand / value,
     };
-    return Number(operatorsActions[operator].toFixed(8));
+    return operatorsActions[operator];
   }
 
 

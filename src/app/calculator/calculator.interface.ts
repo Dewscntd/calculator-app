@@ -6,9 +6,10 @@ export enum OperatorsEnum {
 }
 
 export enum ActionEnum {
-  equals = '=',
-  clear = 'AC'
+  equals = '='
 }
+
+export const allAvailableChars = '01234567890.-+/*=';
 
 export enum CalcButtonEnum {
   digit = 'digit',

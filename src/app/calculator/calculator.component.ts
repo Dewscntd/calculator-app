@@ -19,6 +19,7 @@ export class CalculatorComponent implements OnInit {
   constructor(
     private cdRef: ChangeDetectorRef,
     private calcService: CalculatorService,
+
   ) {
   }
 
@@ -33,7 +34,6 @@ export class CalculatorComponent implements OnInit {
     if (char === '.' && !this.dotOn) {
       this.dotOn = true;
       this.cdRef.detectChanges();
-      return;
     }
 
     if (this.currentOperator && !this.operand) {
@@ -50,15 +50,15 @@ export class CalculatorComponent implements OnInit {
 
   applyOperator(operator: OperatorsEnum): void {
     if (this.operand) {
-      this.operand = this.calc();
-      this.resetValue();
+      this.value = this.calc();
+      this.operand = null;
     }
     this.currentOperator = operator;
     this.cdRef.detectChanges();
   }
 
   calc(): number {
-    if (!this.operatorsEnum || typeof this.operand !== 'number' || typeof this.value !== 'number') {
+    if (!this.currentOperator || typeof this.operand !== 'number' || typeof this.value !== 'number') {
       return;
     }
     this.value = this.calcService.calc(
@@ -68,11 +68,8 @@ export class CalculatorComponent implements OnInit {
     );
     this.operand = null;
     this.currentOperator = null;
-    this.floatValue = null;
-    this.dotOn = false;
     this.cdRef.detectChanges();
     console.log('calculated!', this.value);
-    //  calc
   }
 
 
